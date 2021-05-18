@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+:root{
+    /* variable declaration*/
+    --mainText:#2F2E2C;
+    --secondaryText: #515151;
+    --mainColor: #FEE715FF;
+    --secondaryColor: #fff;
+    --borderColor: #c1c1c1;
+    --navbarColor: #cccccc;
+}
+html,body{
+    padding: 0;
+    margin:0;
+    font-family: 'VT323', monospace ;
+}
+a { 
+    text-decoration: none;
+    color: var(--secondaryText);
+}
+
+ul{
+    list-style: none;
+}
+h1, h2, h3, h4, h5, h6, strong{
+    color: var(--mainText);
+}
+h1 { font-size: 56px;}
+h2 { font-size: 36px;}
+h3 { font-size: 28px;}
+h4 { font-size: 24px;}
+h5 { font-size: 20px;}
+h6 { font-size: 16px;}
+
+p, li , span, label, input, textarea{
+    color: var(--secondaryText);
+    font-size: 20px;
+}
+
+.s1{
+    background-color: var(--mainColor);
+    border-bottom: 1px  solid var(--borderColor);
+    overflow: auto;
+}
+
+.s2{
+    background-color: var(--mainColor);
+    border-bottom: 1px  solid var(--borderColor);
+    overflow: auto;
+}
+/** about me section **/
+.main-container{
+    width: 1200px;
+    margin: 0 auto;
+
+}
+.header-wrapper{
+    display:grid;
+    min-height: 10em;
+    justify-content: center;
+    align-content: center;
+}
+
+.window-wrapper{
+    background-color: var(--secondaryColor);
+    border: 1px solid var(--borderColor);
+    border-radius: 20px 20px 20px 20px;
+    /* box shadow*/
+    -webkit-box-shadow: 20px 20px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 20px 20px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 20px 20px 5px 0px rgba(0,0,0,0.75);
+    /* box shadow */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3em 30em;
+    grid-template-areas:
+        'nav-wrapper nav-wrapper'
+        'left-column right-column'
+    ;
+}
+.nav-wrapper{
+    grid-area: nav-wrapper;
+    border-bottom: 1px solid var(--borderColor);
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--navbarColor);
+    border-radius: 20px 20px 0px 0px;
+
+}
+.contactme{
+    margin: 12.5px;
+    padding: 0px;
+    font-weight: 600;
+    font-size: 24px;
+}
+#facebook, #ig, #gh, #linkedin{
+    width: 40px;
+    height: 40px;
+}
+
+#social li{
+    display: inline-block;
+    padding: 12.5px;
+}
+.left-column{
+    grid-area: left-column;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.right-column{
+    grid-area: right-column;
+    display:flex;
+    justify-content: center;
+    flex-direction: column; 
+}
+.iconlist-wrapper{
+    align-self: center;
+    margin-right: 50px;
+}
+#profilepic {
+    width: 200px;
+    height: 200px;
+    border: 2px solid var(--borderColor);
+    border-radius: 50%;
+    object-fit: cover;
+    display:block;
+    margin: 0 auto;
+    margin-top: 20px;
+    justify-self: center;
+}
+.selfinfo-paper{
+    display: flex;
+    align-self: center;
+}
+#aboutme, #selfinfo{
+    width: 300px;
+    border: 1.5px solid #9E7209; 
+    background-color: rgb(251, 249, 243, 0.8); 
+    padding: 5px;
+    align-self: center;
+}
+
+#whoami{
+    text-align: center;
+    margin: 0 auto;
+}
+#meheader{
+    text-align: center;
+    margin: 0 auto;
+    
+}
+
+/** about me section**/
+
+/**education section**/
+#education-window{
+    margin-top: 25px;
+    grid-template-columns: 1fr
+}
+
+
+
+.navbar-header{
+    margin: 12.5px;
+    padding: 0px;
+    font-weight: 600;
+    font-size: 24px;
+    align-items:center;
+}
+
+.dots-wrapper{
+    display:flex;
+    
+}
+
+.browser-dot{
+    background-color: black;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin: 12px;
+    /* dot shadow */
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+}
+
+#dot-1{
+    background-color: #FC6058;
+}
+
+
+#dot-2{
+    background-color: #FEC02F;
+}
+
+#dot-3{
+    background-color: #2ACA3E;
+}
+
+.edu-container{
+    display: flex;
+    width: 100%;
+    padding-bottom: 400px;
+    margin: 0 auto;
+    justify-content: center;
+    max-height: 800px;
+}
+    /** timeline section**/
+.timeline{
+    position: relative;
+    min-height: 350px;
+}
+.line{
+    position: absolute;
+    z-index: 2;
+    left: calc(50%-1px);
+    width: 2px;
+    top: 30px; 
+    background-color: #1EB1ED;
+    
+    display: none;
+}
+    /* dot animation*/
+.line:before,
+.line:after{
+    position:absolute;
+    display:block;
+    content:'';
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #1EB1ED;
+    left:50%;
+    right:50%;
+    transform: translateX(-50%);
+}
+
+.line:after {
+    bottom: 0px;
+}
+.edu-content{
+    display: flex;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: 600ms ease;
+    position: relative;
+    z-index: 1;
+    margin: -0px 0;
+    padding: 1rem;
+    border-radius: 1rem;
+    align-items: center;
+}
+
+.edu-content:nth-child(odd){
+    flex-direction: row-reverse;
+    transform: translateX(100%);
+}
+.content{
+    width: calc(50% - 2rem);
+}
+
+
+.show-me:nth-child(n){
+    transform: none;
+    opacity: 1;
+}
+
+#kku-timeline{
+    bottom: 20px;
+}
+/** education section**/
+
+/** skills section**/
+#skill-window{
+    margin-top: 25px;
+}
+#skill-leftcol{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-container-top{
+    display: flex;
+    padding-bottom: 25px;
+    width: 350px;
+}
+
+.skill-container-bottom{
+    display: flex;
+    width: 350px;
+}
+.skilltxt-container{
+    display: flex;
+    flex-direction: column;
+}
+.skill-container-top img{
+    width: 150px;
+    height: 150px;
+    padding: 12.5px;
+    justify-self: flex-start;
+}
+
+.skill-container-bottom img{
+    width: 150px;
+    height: 150px;
+    padding: 12.5px; 
+    justify-self: flex-start;
+}
+
+#skill-rightcol{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+/** skills section**/
+
+
+/** project section**/
+.card-container{
+    display: flex;
+    flex-direction: row;
+}
+.card-wrapper{
+    position: relative;
+    display:flex;
+    flex-direction: row;
+    padding-right: 10px;
+    padding-bottom: 25px;
+}
+#runlogo{
+    width:200px;
+    height:200px;
+}
+.projectcard{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    /** box shadow **/
+    -webkit-box-shadow: 20px 20px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 20px 20px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 20px 20px 5px 0px rgba(0,0,0,0.75);
+    /** box shadow **/
+    
+}
+
+/** for 2nd project and so on**/
+.projectcard2{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    /** box shadow **/
+    -webkit-box-shadow: 20px 20px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 20px 20px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 20px 20px 5px 0px rgba(0,0,0,0.75);
+    /** box shadow **/
+    margin-left: 25px;
+}
+
+.boxcontent{
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.boxcontent:hover {
+    opacity: 1;
+}
+/** project section**/
+
+/* responsive web design about me section*/
+@media screen and (max-width: 1200px){
+    .main-container{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 800px){
+    .window-wrapper{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'nav-wrapper'
+            'left-column'
+            'right-column'
+        ;
+    }
+    .right-column{
+        justify-content:center;
+    }
+    #aboutme{
+        width: 300px;
+        border: 1.5px solid #9E7209; 
+        background-color: rgb(251, 249, 243, 0.8); 
+        padding: 5px;
+        margin-top: -75px;
+    }
+
+    #profilepic{
+        margin-top: -100px;
+        padding-top: 0px;
+    }
+}
+@media screen and (max-width: 600px){
+    .main-container{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .main-container{
+        width: 95%;
+    }
+    .window-wrapper{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'nav-wrapper'
+            'left-column'
+            'right-column'
+        ;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .main-container{
+        width: 95%;
+    }
+    .window-wrapper{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'nav-wrapper'
+            'left-column'
+            'right-column'
+        ;
+    }
+    .left-column{
+        width: 300px;
+    }
+    .right-column{
+        width: 300px;
+    }
+    .skill-container-top img{
+        width: 50px;
+        height: 50px;
+        padding: 12.5px;
+        justify-self: flex-start;
+    }
+    
+    .skill-container-bottom img{
+        width: 50px;
+        height: 50px;
+        padding: 12.5px; 
+        justify-self: flex-start;
+    }
+    .skilltxt-container{
+        width: 50%;
+        height: 50%;
+    }
+    .skill-container-top, .skill-container-bottom{
+        width:75%;
+    }
+
+    #aboutme{
+        width: 60%;
+    }
+    .selfinfo-paper{
+        width: 60%;
+        margin-right: 25px;
+    }
+    .window-wrapper{
+        /* box shadow*/
+        -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+        /* box shadow */
+    }
+
+    .projectcard{
+        
+        /** box shadow **/
+        -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+        /** box shadow **/
+        
+    }
+    
+    /** for 2nd project and so on**/
+    .projectcard2{
+        
+        /** box shadow **/
+        -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+        /** box shadow **/
+        
+    }
+}
