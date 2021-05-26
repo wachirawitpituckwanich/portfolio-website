@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=VT323');
 :root{
     /* variable declaration*/
-    --mainText:#2F2E2C;
+    --mainText:#000;
     --secondaryText: #515151;
     --mainColor: #FEE715FF;
     --secondaryColor: #fff;
@@ -40,24 +40,21 @@ p, li , span, label, input, textarea{
     background-color: var(--mainColor);
     border-bottom: 1px  solid var(--borderColor);
     overflow: auto;
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-top: 25px;
 }
-
-.s2{
-    background-color: var(--mainColor);
-    border-bottom: 1px  solid var(--borderColor);
-    overflow: auto;
+/** header **/
+.welcome-header{
+    text-align: center;
 }
 /** about me section **/
-.main-container{
-    width: 1200px;
-    margin: 0 auto;
-
-}
 .header-wrapper{
     display:grid;
     min-height: 10em;
     justify-content: center;
     align-content: center;
+    border: 1px dashed var(--borderColor);
 }
 
 .window-wrapper{
@@ -76,6 +73,7 @@ p, li , span, label, input, textarea{
         'nav-wrapper nav-wrapper'
         'left-column right-column'
     ;
+    
 }
 .nav-wrapper{
     grid-area: nav-wrapper;
@@ -380,6 +378,10 @@ p, li , span, label, input, textarea{
     opacity: 1;
 }
 /** project section**/
+.drawerbar{
+    width:-200px;
+    background-color:#fff;
+}
 
 /* responsive web design about me section*/
 @media screen and (max-width: 1200px){
@@ -412,13 +414,30 @@ p, li , span, label, input, textarea{
         padding-top: 0px;
     }
 }
+@media screen and (max-width: 1024px){
+    .s1{
+        padding-left:  50px;
+        padding-right: 50px;
+    }
+    .main-container{
+        width: 95%;
+    }
+}
 @media screen and (max-width: 600px){
+    .s1{
+        padding-left:  10px;
+        padding-right: 10px;
+    }
     .main-container{
         width: 95%;
     }
 }
 
 @media screen and (max-width: 400px){
+    .s1{
+        padding-left:  10px;
+        padding-right: 10px;
+    }
     .main-container{
         width: 95%;
     }
