@@ -35,7 +35,9 @@ p, li , span, label, input, textarea{
     color: var(--secondaryText);
     font-size: 20px;
 }
-
+#pcu {
+    padding-left: 15px;
+}
 .s1{
     background-color: var(--mainColor);
     border-bottom: 1px  solid var(--borderColor);
@@ -430,6 +432,9 @@ p, li , span, label, input, textarea{
         padding-left:  10px;
         padding-right: 10px;
     }
+    #pcu {
+        padding-left: 0px;
+    }
     .main-container{
         width: 50%;
     }
@@ -450,6 +455,9 @@ p, li , span, label, input, textarea{
         /** box shadow **/
         
     }
+    .card-container{
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 400px){
@@ -468,11 +476,17 @@ p, li , span, label, input, textarea{
             'right-column'
         ;
     }
+    #pcu {
+        padding-left: 0px;
+    }
 }
 
 @media screen and (max-width: 360px){
     .main-container{
         width: 90%;
+    }
+    #pcu {
+        padding-left: 0px;
     }
     .window-wrapper{
         grid-template-columns: 1fr;
@@ -508,7 +522,9 @@ p, li , span, label, input, textarea{
     .skill-container-top, .skill-container-bottom{
         width:75%;
     }
-
+    .card-container{
+        flex-direction: column;
+    }
     #aboutme{
         width: 60%;
     }
